@@ -8,7 +8,7 @@ const weatherToken = process.env.WEATHER_API_TOKEN
 const weatherURL = new URL('https://api.openweathermap.org/data/2.5/weather')
 weatherURL.searchParams.set('zip', '517501,in')
 weatherURL.searchParams.set('APPID', weatherToken)
-weatherURL.searchParams.set('units', 'imperial')
+weatherURL.searchParams.set('units', 'metric')
 
 const getWeatherData = async () => {
   const resp = await fetch(weatherURL.toString())
